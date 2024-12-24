@@ -20,8 +20,8 @@ if [ "$license_key" == "Obscurax" ]; then
   sudo mv /var/www/enigma/enigma.zip /var/www/
   sudo rm -rf enigma
 
-  # Extract the theme
-  sudo unzip enigma.zip -d /var/www/
+  # Extract the theme (overwrite existing files without prompt)
+  sudo unzip -o enigma.zip -d /var/www/
   sudo rm enigma.zip
 
   # Setup Node.js repository and install Node.js
